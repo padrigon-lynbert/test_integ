@@ -1,0 +1,1 @@
+web: gunicorn test_integ_dj.wsgi
