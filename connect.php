@@ -118,3 +118,38 @@ $password = "RnOMkUBoAX06KJ7crw3mBgl68pN3ISyf";
     ?>
 
     <h1>Image > migrate again to store blob instead</h1>
+
+
+<?php
+$host = "dpg-d0e74ch5pdvs73aqmnr0-a.oregon-postgres.render.com";
+$port = "5432";
+$dbname = "logistic2";
+$user = "logistic2_user";
+$password = "RnOMkUBoAX06KJ7crw3mBgl68pN3ISyf";
+
+try {
+    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;";
+    $pdo = new PDO($dsn, $user, $password);
+
+    $sql = "SELECT * FROM approved_procurement ORDER BY id DESC";
+    $stmt = $pdo->query($sql);
+
+    echo "<table border='1' cellpadding='8'>";
+    echo "<tr><th>ID</th><th>PRC Request ID</th><th>Supplier ID</th><th>Agreement Text</th><th>Offer Price</th></tr>";
+
+    // table output as a row
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        echo "<tr>
+                <td>{$row['id']}</td>
+                <td>{$row['prc_request_id']}</td>
+                <td>{$row['supplier_id']}</td>
+                <td>{$row['agreement_text']}</td>
+                <td>{$row['offer_price']}</td>
+              </tr>";
+    }
+
+    echo "</table>";
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+?>
