@@ -44,21 +44,30 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 ?>
 
 <!-- <h1>user_info, cant unhash this unfortunately</h1> -->
+<br>
+
+<h3>Users</h3>
 <?php
-
 // select * from user_info 
-// $query = $pdo->query("SELECT * FROM user_info");
+$query = $pdo->query("SELECT * FROM market_userinfo");
 
-// Loop, display each row
-// while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-//     echo "ID: " . $row['id'] . "<br>";
-//     echo "Name: " . $row['name'] . "<br>";
-//     echo "Email: " . $row['email'] . "<br>";
-//     echo "Password: " . $row['password'] . "<br>";
-//     echo "Info: " . $row['info'] . "<br>";
-//     echo "Bid: " . $row['bid'] . "<br>";
-//     echo "<hr>";  // line to separate output
-// }
+// Loop, display each row, scrollable
+echo "<div style='max-height: 400px; overflow-y: auto; width: 70%;'>";
+
+while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+    echo "ID: " . $row['id'] . "<br>";
+    echo "Name: " . $row['name'] . "<br>";
+    echo "Email: " . $row['email'] . "<br>";
+    echo "Password: " . $row['password'] . "<br>";
+    echo "Info: " . $row['info'] . "<br>";
+    echo "Bid: " . $row['bid'] . "<br>";
+    echo "<hr>";
+}
+
+echo "</div>";
+
+
+
 ?>
 
 
