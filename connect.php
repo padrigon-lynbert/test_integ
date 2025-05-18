@@ -76,7 +76,8 @@ echo "</div>";
 </div> -->
 <h1>Public domain</h1>
 <div style="padding: 5%;">
-  <iframe src="https://logistics-2-kft6.onrender.com" width="100%" height="700px"></iframe>
+  <iframe src="https://logistics-2-kft6.onrender.com" width="100%" height="700px"
+    style="Zoom: 75%"></iframe>
 </div>
 <!-- <h1>user domain</h1>
 <div style="padding: 5%;">
