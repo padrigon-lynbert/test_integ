@@ -70,20 +70,3 @@ echo "</div>";
 
 ?>
 
-
-<!-- <h1>frame wikipedia(example)</h1> -->
-<!-- <div style="padding: 5%;">
-</div> -->
-<h1>Public domain</h1>
-<div style="padding: 5%;">
-  <iframe src="https://logistics-2-kft6.onrender.com" width="100%" height="700px"
-    style="Zoom: 75%"></iframe>
-</div>
-<!-- <h1>user domain</h1>
-<div style="padding: 5%;">
-  <iframe src="https://logistics-1-0er9.onrender.com" width="100%" height="700px"></iframe>
-</div>
-<h1>admin domain</h1>
-<div style="padding: 5%;">
-  <iframe src="https://admin-domain.onrender.com" width="100%" height="700px"></iframe>
-</div> -->
